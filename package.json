@@ -1,0 +1,56 @@
+{
+	"name": "storyblok-text-export",
+	"version": "0.0.1",
+	"description": "npx CLI tool to export all text-content of stories of a Storyblok space into text-files.",
+	"scripts": {
+		"upgrade": "npx npm-check-updates -i -u --install never && pnpm install",
+		"lint:js": "eslint --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts .",
+		"lintfix:js": "pnpm lint:js --fix",
+		"lint:prettier": "prettier --ignore-path ./.lintignore --check .",
+		"lintfix:prettier": "prettier --ignore-path ./.lintignore --write --list-different .",
+		"lint": "pnpm lint:js && pnpm lint:prettier",
+		"lintfix": "pnpm lintfix:js && pnpm lintfix:prettier"
+	},
+	"bin": {
+		"storyblok-text-export": "bin/storyblok-text-export.mjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/webflorist/storyblok-text-export.git"
+	},
+	"keywords": [
+		"storyblok",
+		"cms",
+		"export",
+		"translation",
+		"cli",
+		"node",
+		"script",
+		"npx"
+	],
+	"author": "Gerald Buttinger <gerald@code.florist>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/webflorist/storyblok-text-export/issues"
+	},
+	"homepage": "https://github.com/webflorist/storyblok-text-export#readme",
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.26.0",
+		"eslint": "^9.26.0",
+		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-prettier": "^5.4.0",
+		"globals": "^16.1.0",
+		"prettier": "^3.5.3"
+	},
+	"dependencies": {
+		"@dotenvx/dotenvx": "^1.43.0",
+		"@storyblok/richtext": "^3.2.0",
+		"html-to-text": "^9.0.5",
+		"lodash": "^4.17.21",
+		"minimist": "^1.2.8",
+		"pretty": "^2.0.0",
+		"storyblok-js-client": "^6.10.11",
+		"turndown": "^7.2.0"
+	}
+}
