@@ -248,8 +248,7 @@ function parseContentNode(node, fieldPath = []) {
 				const fieldType = component.schema[key].type
 				const isTranslatable = component.schema[key].translatable
 				subnodeFieldPath.push(
-					component.schema[key].display_name ||
-						capitalizeFirstLetter(component.schema[key].key)
+					component.schema[key].display_name || capitalizeFirstLetter(key)
 				)
 
 				if (['text', 'textarea', 'richtext', 'table'].includes(fieldType)) {
