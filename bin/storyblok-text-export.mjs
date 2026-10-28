@@ -5,12 +5,10 @@ import minimist from 'minimist'
 import StoryblokClient from 'storyblok-js-client'
 import { performance } from 'perf_hooks'
 import dotenvx from '@dotenvx/dotenvx'
-import { richTextResolver } from '@storyblok/richtext'
+import { renderRichText } from '@storyblok/richtext'
 import { convert as htmlToText } from 'html-to-text'
 import TurndownService from 'turndown'
 import prettify from 'pretty'
-
-const { render: renderRichText } = richTextResolver()
 
 const startTime = performance.now()
 
